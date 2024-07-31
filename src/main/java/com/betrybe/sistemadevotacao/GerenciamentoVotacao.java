@@ -2,6 +2,9 @@ package com.betrybe.sistemadevotacao;
 
 import java.util.ArrayList;
 
+/**
+ * The type Gerenciamento votacao.
+ */
 public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
 
   private ArrayList<PessoaCandidata> pessoasCandidatas = new ArrayList<PessoaCandidata>();
