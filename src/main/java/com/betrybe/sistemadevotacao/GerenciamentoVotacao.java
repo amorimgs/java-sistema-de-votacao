@@ -52,12 +52,13 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
     int totalVotos = cpfsComputados.size();
     if (totalVotos == 0) {
       System.out.println("É preciso ter pelo menos um voto para mostrar o resultado.");
+    } else {
+      for (PessoaCandidata p : pessoasCandidatas) {
+        System.out.println(
+            "Nome: " + p.getNome() + " - " + p.getVotos() + " votos ( " + Math.round(
+                ((float) p.getVotos() / totalVotos) * 100) + "% )");
+      }
+      System.out.println("Total de votos: " + totalVotos);
     }
-    for (PessoaCandidata p : pessoasCandidatas) {
-      System.out.println(
-          "Nome: " + p.getNome() + " - " + p.getVotos() + " votos ( " + Math.round(
-              ((float) p.getVotos() / totalVotos) * 100) + "% )");
-    }
-    System.out.println("Total de votos: " + totalVotos);
   }
 }
